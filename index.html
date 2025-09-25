@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yayasan Ummul Ayman — Beranda (Contoh)</title>
+  <meta name="description" content="Contoh homepage bergaya lembaga pendidikan.">
+  <style>
+    :root{
+      --primary:#0b5b3a;
+      --accent:#d9b06b;
+      --muted:#666;
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --maxw:1100px;
+      --radius:10px;
+      --container-pad:20px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* NAV */
+    .topbar{
+      background:linear-gradient(90deg, rgba(11,91,58,0.97), rgba(9,77,49,0.95));
+      color: #fff;
+      padding:8px 16px;
+      font-size:14px;
+      text-align:right;
+    }
+    header.site-header{
+      background:#fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:30;
+    }
+    .nav-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:12px var(--container-pad);
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .brand img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    .brand .title{font-weight:700;color:var(--primary)}
+    nav.main-nav a{
+      color:#333;
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:600;
+      font-size:15px;
+    }
+
+    /* HERO */
+    .hero{
+      background-image: linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=7d5b2b6f4adf8b0f7b3b5f3b4b1f8e3a');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      padding:80px 16px;
+    }
+    .hero .hero-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:24px;
+      align-items:center;
+    }
+    .hero h1{font-size:36px;margin:0 0 8px;line-height:1.05}
+    .hero p.lead{margin:0 0 18px;color:#f2f2f2}
+    .card-visit{
+      background:rgba(255,255,255,0.95);
+      color:#111;
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 24px rgba(0,0,0,0.12);
+      text-align:center;
+    }
+    .card-visit strong{display:block;font-size:18px;margin-bottom:8px;color:var(--primary)}
+    .btn {display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* LAYOUT SECTIONS */
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:0 var(--container-pad)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
+    h2.section-title{margin:0 0 18px;color:var(--primary);font-size:20px}
+
+    /* NEWS */
+    .news-item{display:flex;gap:14px;align-items:flex-start}
+    .news-item img{width:120px;height:80px;object-fit:cover;border-radius:8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .contact iframe{width:100%;height:240px;border:0;border-radius:8px}
+
+    /* FOOTER */
+    footer.site-foot{background:#0a2f22;color:#fff;padding:30px 16px;margin-top:40px}
+    .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){
+      .hero .hero-inner{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr;gap:14px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- topbar -->
+  <div class="topbar">
+    Kontak: +62 821-xxxx-xxxx &nbsp; | &nbsp; Email: info@ummulayman.or.id
+  </div>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="https://images.unsplash.com/photo-1542736667-069246bdbc9e?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=23c920a3d1a4cbb3b4b3060e0f2a9b3a" alt="logo">
+        <div>
+          <div class="title">Yayasan Ummul Ayman</div>
+          <small class="muted">Pendidikan & Pengembangan Santri</small>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#program">Program</a>
+        <a href="#news">Berita</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" id="home" role="region" aria-label="Hero section">
+    <div class="hero-inner">
+      <div>
+        <h1>Selamat Datang di Yayasan Ummul Ayman</h1>
+        <p class="lead">Membangun generasi Qur'ani yang berwawasan keilmuan dan kemandirian melalui pendidikan dayah dan program kewirausahaan.</p>
+
+        <p>
+          <a class="btn" href="#program">Lihat Program</a>
+          &nbsp;
+          <a class="btn" href="#news" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.35)">Berita Terbaru</a>
+        </p>
+      </div>
+
+      <aside class="card-visit" aria-label="Informasi kunjungan">
+        <strong>Jadwal Kunjungan</strong>
+        <div class="muted">Jumat: 09.00 - 17.30 WIB</div>
+        <div style="height:10px"></div>
+        <a class="btn" href="#kontak">Hubungi Kami</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- about -->
+  <main>
+    <section class="wrap" id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">Tentang Kami</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Visi</h3>
+          <p class="muted">Menjadi pusat pendidikan Islam yang unggul dalam ilmu dan akhlak, serta berkontribusi pada masyarakat.</p>
+        </div>
+        <div class="card">
+          <h3>Misi</h3>
+          <ul class="muted">
+            <li>Mendidik santri dengan metode tradisional-modern.</li>
+            <li>Mengembangkan program kewirausahaan santri.</li>
+            <li>Menguatkan amal jama'i dan kerja sama komunitas.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Fasilitas</h3>
+          <p class="muted">Asrama, ruang kelas, masjid, laboratorium sederhana, dan bengkel kewirausahaan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- program/activities -->
+    <section class="wrap" id="program" aria-labelledby="prog-title">
+      <h2 id="prog-title" class="section-title">Program & Kegiatan</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Pengajian Rutin</h4>
+          <p class="muted">Kegiatan pengajian setiap hari dengan metode tartil dan tafsir.</p>
+        </div>
+        <div class="card">
+          <h4>Pelatihan Kewirausahaan</h4>
+          <p class="muted">Program keterampilan untuk modal usaha santri.</p>
+        </div>
+        <div class="card">
+          <h4>Pendidikan Formal</h4>
+          <p class="muted">Kerjasama dengan sekolah formal untuk keseimbangan kurikulum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- news -->
+    <section class="wrap" id="news" aria-labelledby="news-title">
+      <h2 id="news-title" class="section-title">Berita Terbaru</h2>
+
+      <div class="card" style="margin-bottom:18px">
+        <article class="news-item">
+          <img src="https://images.unsplash.com/photo-1525011268546-bf1147b3b6c0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ad2f8d4b7d7f0c1a" alt="Berita 1">
+          <div>
+            <h4 style="margin:0 0 6px">Lokakarya Kewirausahaan Santri</h4>
+            <div class="muted">12 Sep 2025 • Oleh Admin</div>
+            <p class="muted" style="margin-top:8px">Santri mengikuti pelatihan pembuatan produk olahan lokal sebagai bagian dari program pemberdayaan.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="card">
+          <h4>Penyerahan Bantuan</h4>
+          <p class="muted">Kegiatan penyerahan bantuan untuk santri kurang mampu.</p>
+        </div>
+        <div class="card">
+          <h4>Pengajian Akbar</h4>
+          <p class="muted">Acara pengajian terbuka untuk masyarakat umum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="wrap" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="section-title">Galeri Foto</h2>
+      <div class="card">
+        <div class="gallery" aria-hidden="false">
+          <img src="https://images.unsplash.com/photo-1505873242704-4852f2fbf1e2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef" alt="">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=bbccdd" alt="">
+          <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19b9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ccdde1" alt="">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ddeeff" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="wrap" id="kontak" aria-labelledby="kontak-title">
+      <h2 id="kontak-title" class="section-title">Kontak & Lokasi</h2>
+      <div class="card contact-grid">
+        <div>
+          <h4>Alamat</h4>
+          <p class="muted">Jl. Contoh No.12, Banda Aceh • Telepon: +62 821-xxxx-xxxx</p>
+          <h4 style="margin-top:12px">Jam Kunjungan</h4>
+          <p class="muted">Selasa: 16.00 - 17.30 • Jumat: 09.00 - 17.30</p>
+          <h4 style="margin-top:12px">Email</h4>
+          <p class="muted">info@ummulayman.or.id</p>
+        </div>
+
+        <div>
+          <!-- contoh embed maps (ganti src dengan link embed map aktual) -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..." aria-label="Peta Lokasi"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="site-foot" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <strong>Yayasan Ummul Ayman</strong>
+        <div class="muted" style="margin-top:6px">Membangun generasi qur'ani berwawasan.</div>
+      </div>
+
+      <div style="text-align:right">
+        <div class="muted">© 2025 Ummul Ayman</div>
+        <div style="margin-top:8px" class="muted">Dibuat sebagai contoh desain</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS: smooth scroll + simple accessibility helpers -->
+  <script>
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const targ = document.querySelector(a.getAttribute('href'));
+        if(targ){ e.preventDefault(); targ.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
